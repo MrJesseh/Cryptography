@@ -2,6 +2,10 @@ let letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 
 
 
 function DecryptVigenere(cipher, key){
+    // First make sure that the text is lowercase, and that text exists.
+    if(cipher.length < 1){return console.error("You did not provide any cipher text.")}
+    cipher = cipher.toLowerCase();
+
     let cipherArray = cipher.split("");
     let keyArray = key.split("");
     let resultArray = [];
@@ -22,7 +26,13 @@ function DecryptVigenere(cipher, key){
 }
 
 function EncryptVigenere(text, key){
+    // First make sure that the text is lowercase, and that text exists.
+    if(text.length < 1){return console.error("You did not provide any cipher text.")}
+    text = text.toLowerCase();
+    
+    // Remove all spaces.
     text = text.replace(/\s+/g, '');
+
     let textArray = text.split("");
     let keyArray = key.split("");
     let resultArray = [];

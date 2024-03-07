@@ -2,6 +2,10 @@ let letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 
 
 
 function DecryptCaesar(cipher, shift){
+    // First make sure that the text is lowercase, and that text exists.
+    if(cipher.length < 1){return console.error("You did not provide any cipher text.")}
+    cipher = cipher.toLowerCase();
+
     let cipherArray = cipher.split("");
     let resultArray = [];
 
@@ -15,6 +19,10 @@ function DecryptCaesar(cipher, shift){
 }
 
 function DecryptCaesarAllShifts(cipher){
+    // First make sure that the text is lowercase, and that text exists.
+    if(cipher.length < 1){return console.error("You did not provide any cipher text.")}
+    cipher = cipher.toLowerCase();
+
     let cipherArray = cipher.split("");
     let resultArray = [];
 
@@ -34,7 +42,13 @@ function DecryptCaesarAllShifts(cipher){
 }
 
 function EncryptCaesar(text, shift){
+    // First make sure that the text is lowercase, and that text exists.
+    if(text.length < 1){return console.error("You did not provide any text to encrypt.")}
+    text = text.toLowerCase();
+
+    // Remove all spaces.
     text = text.replace(/\s+/g, '');
+
     let textArray = text.split("");
     let resultArray = [];
 
