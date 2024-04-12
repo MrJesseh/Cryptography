@@ -14,8 +14,12 @@
     "Cryptography"
   ],
   "author": "Jesse",
+<<<<<<< HEAD
   "license": "MIT",
   "dependencies": {
     "quickchart-js": "^3.1.3"
   }
+=======
+  "license": "MIT"
+>>>>>>> 67682872645ab0882c03d9734b450ad8e4b2d99f
 }
